@@ -11,12 +11,14 @@ function Encrypt($scope){
             var tempC = "";
             for(var y = 0; y < $scope.pass.length; y++) {
                 var temp = (($scope.phrase.charCodeAt(x) + $scope.pass.charCodeAt(y)));
-               if(temp > 255){temp-=255;}
+               if(temp < 21){temp+=21;}
+               if(temp > 122){temp-=122;}
                tempC = String.fromCharCode(Number(temp));
             }
             $scope.result+=tempC;
         }
         //console.log($scope);
+        console.log($scope.result.length + " = " + $scope.phrase.length);
         //console.log($scope.phrase.charCodeAt(0));
     } ;
 
