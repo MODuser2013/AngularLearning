@@ -3,30 +3,15 @@
 <head>
     <title></title>
     <script src="angular.min.js"></script>
-    <script>
-         var t1 = "hi";
-         var w1;
-         var w2;
-         var w3;
+    <script src="code.js"></script>
 
-        function TTTCtrl($scope) {
-            $scope.word1 = t1;
-            $scope.word2 = t1;
-            $scope.word3 = t1;
-            w1 = $scope.word1;
-            w2 = $scope.word2;
-            w3 = $scope.word3;
-            $scope.click = function() {alert("hi");}
-        }
-
-    </script>
 </head>
 <body>
-<div ng-controller="TTTCtrl">
-    <input type="text" name="word1" ng-model="word1">
-    <input type="text" name="word2" ng-model="word2">
-    <input type="submit" value="Submit"  ng-click="click()">
-    {{word1 + word2 + click()}}
+
+
+<div ng-controller="Encrypt">
+
+
 </div>
 </body>
 </html>
