@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="encryptApp">
 <head>
     <title></title>
-    <script src="angular.min.js"></script>
+
 
 
 </head>
 <body>
-
+<script src="angular.min.js"></script>
 <script src="code.js"></script>
-<div ng-controller="Encrypt">
- <input type="text" ng-model="phrase" default = "Default">
- <input type="text" ng-model="pass" default = "Default">
- <input type="submit" value="Gibberishify" ng-click="gibberish()">
+<div ng-controller="encryptController">
+ <input type="text" ng-model="data.phrase" default = "Default">
+ <input type="text" ng-model="data.mod" default = "Default">
     <h4> </h4>
-    {{phrase}}
-    <h4>+</h4>
-    {{pass}}
-    <h4>=</h4>
-    {{result}}
+    {{data.mod}}
+    <h4>modifying</h4>
+    {{data.phrase}}
+    <h4>makes</h4>
+    {{data.modify()}}
 </div>
 </body>
 </html>
