@@ -2,7 +2,26 @@
 <html ng-app="encryptApp">
 <head>
     <title></title>
-
+     <style>
+         #generator {
+             background: #f2fbfa;
+             border: #dfe8e7;
+             border:2px solid;
+             border-radius:10px;
+             display: inline-block;
+             padding-left: 10px;
+             padding-right: 10px;
+         }
+      #results {
+          background: #f2fbfa;
+          border: #c7d0cf;
+          border:2px solid;
+          border-radius:15px;
+          display: inline-block;
+          padding-left: 10px;
+          padding-right: 10px;
+      }
+     </style>
 
 
 </head>
@@ -10,14 +29,23 @@
 <script src="angular.min.js"></script>
 <script src="code.js"></script>
 <div ng-controller="encryptController">
+    <h2>Simple Word Modifier (Angular.js Learning)</h2>
+    <h5>by Brandon and Alex</h5>
+    <p>   </p>
+    <div id="generator">
+    <h6>Word:</h6>
  <input type="text" ng-model="data.phrase" default = "Default">
+    <h6>Modifying Word:</h6>
  <input type="text" ng-model="data.mod" default = "Default">
+    </div>
     <h4> </h4>
+    <div id="results">
     {{data.mod}}
     <h4>modifying</h4>
     {{data.phrase}}
     <h4>makes</h4>
     {{data.modify()}}
+    </div>
 </div>
 </body>
 </html>
